@@ -11,7 +11,7 @@ function App() {
        <Searchengine />
        </div>
        <div className='footer'>my 
-       <a className='source' href='/'> open source</a> code</div>
+       <a className='source' href='https://github.com/Leilaseif/homework'> open source</a> code</div>
       </header>
     </div>
   );
