@@ -1,0 +1,34 @@
+.forming{
+    margin-top: 10px;
+}
+.search{
+    
+    border-radius: 4px;
+    margin-right: 10px;
+    padding-right: 150px;
+}
+.submit{
+    border-radius: 4px;
+}
+.temperature{
+    margin-top: 20px;
+}
+.number{
+    font-size: 80px;
+
+}
+.unit{
+    font-size: 40px;
+    position: relative;
+    top: -30px;
+    padding-left: 10px;
+}
+.icon{
+    font-size: 60px;
+    padding-left: 30px;
+}
+.moredata{
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.388);
+    margin-top: 16px;
+}
