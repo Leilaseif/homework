@@ -23,13 +23,13 @@ export default function Searchengine (){
             wind:response.data.wind.speed ,
             humidity:response.data.main.humidity,
             description: response.data.weather[0].description ,
-            iconUrl:"https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
+            iconUrl:`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
             date: new Date(response.data.dt)
         });
         setReady(true);
     }
     function search() {
-        const apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+        const apiKey = "82796af55a1157613b4fa827494ee65a";
         let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
         axios.get(apiUrl).then(showTemperature);
       }
@@ -64,7 +64,7 @@ export default function Searchengine (){
     )}
     else{
         let city ="New York"
-        const apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+        const apiKey = "82796af55a1157613b4fa827494ee65a";
         let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
         axios.get(apiUrl).then(showTemperature);
        
