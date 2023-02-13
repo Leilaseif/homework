@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import "./Searchengine.css";
 import axios from "axios";
 import FormattedDate from "./FormattedDate";
+import UnitConversion from "./unitconversion";
 
 export default function Searchengine (){
     const [ready , setReady]=useState(false);
@@ -45,11 +46,8 @@ export default function Searchengine (){
         <FormattedDate date={weatherData.date}/>
         <h2>{city}</h2>
         <span className="description"> {weatherData.description}</span><br />
-       
-        <div className="temperature">
-        <span className="number">{Math.round(weatherData.temper)}</span>
-        <span className="unit">°c</span>
-        </div>
+       <UnitConversion celsius={weatherData.temper}/>
+        
         <div className="row">
             <div className="col-3 icon">
                <img  src={weatherData.iconUrl} alt="" />
