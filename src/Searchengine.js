@@ -4,6 +4,7 @@ import "./Searchengine.css";
 import axios from "axios";
 import FormattedDate from "./FormattedDate";
 import UnitConversion from "./unitconversion";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Searchengine (){
     const [ready , setReady]=useState(false);
@@ -19,13 +20,16 @@ export default function Searchengine (){
         setCity(event.target.value);
     }
     function showTemperature (response){
+        console.log(response.data);
         setweatherData({
+            
             temper:response.data.main.temp , 
             wind:response.data.wind.speed ,
             humidity:response.data.main.humidity,
             description: response.data.weather[0].description ,
             iconUrl:`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
-            date: new Date(response.data.dt)
+            date: new Date(response.data.dt) ,
+            coordinates : response.data.coord ,
         });
         setReady(true);
     }
@@ -57,6 +61,7 @@ export default function Searchengine (){
                 <span className="wind">wind:{weatherData.wind} km/h</span>
                 </div>
         </div>
+        <WeatherForecast coordinates={weatherData.coordinates} />
 
      </div>
     )}

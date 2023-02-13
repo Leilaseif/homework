@@ -1,0 +1,13 @@
+.iconForecast{
+    font-size: 36px;
+}
+.temperatureForecast-max{
+padding-right: 6px;
+
+}
+.temperatureForecast-min{
+opacity: 60%;
+}
+.col{
+    text-align: center;
+}
