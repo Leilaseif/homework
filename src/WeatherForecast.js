@@ -27,7 +27,7 @@ if (loaded){
                     <div className="col">
                          <WeatherForecastDay data={dailyForecast}/>
                           </div>
-                    )
+                    );
                 }
             })}
         </div>
