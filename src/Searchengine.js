@@ -53,9 +53,8 @@ export default function Searchengine (){
         <h2>{city}</h2>
         <span className="description"> {weatherData.description}</span><br />
        <UnitConversion celsius={weatherData.temper}/>
-        
-        <div className="row">
-          
+        <div className="iconMoreData">
+        <div className="row  "> 
           <div className="col-3 icon ">
             <div className="float-left">
               <WeatherIcon code={weatherData.icon} size={90}/>
@@ -64,8 +63,9 @@ export default function Searchengine (){
             <div className="col-9 moredata">
                 <span className="humidity"> humidity:{weatherData.humidity} %</span><br />
                 <span className="wind">wind:{weatherData.wind} km/h</span>
-                </div>
+            </div>
                
+        </div>
         </div>
         <WeatherForecast coordinates={weatherData.coordinates} />
 

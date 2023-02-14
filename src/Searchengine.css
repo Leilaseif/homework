@@ -23,13 +23,13 @@
     top: -30px;
     padding-left: 10px;
 }
-/* .icon{
-    size: 20px;
-    padding-left: -30px;
-} */
+
 .moredata{
     font-size: 20px;
     color: rgba(0, 0, 0, 0.388);
     margin-top: 16px;
     margin-bottom: 20px;
+}
+.iconMoreData{
+    margin-left: 50px;
 }
